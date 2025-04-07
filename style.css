@@ -1,0 +1,19 @@
+/* Targets any element in the HTML page with the class "title" */
+.title {
+  /* Add CSS styles here */
+}
+
+/* Targets the single element in the HTML page with the id "nav" */
+#nav {
+  /* Add CSS styles here */
+}
+
+/* Targets all <div> elements in the HTML page */
+div {
+  /* Add CSS styles here */
+}
+
+/* Targets all <h2> elements in the HTML page */
+h2 {
+  /* Add CSS styles here */
+}
