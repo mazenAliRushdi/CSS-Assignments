@@ -3,8 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Assignments</title>
+    <title>Styled Lists</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <ul class="main-list">
+      <li class="list-item">
+        <h2 class="list-title html-title">HTML</h2>
+        <ol class="inner-list numbered-upper-roman">
+          <li class="inner-item">Slim</li>
+          <li class="inner-item">Pugjs</li>
+          <li class="inner-item">HAML</li>
+        </ol>
+      </li>
+      <li class="list-item">
+        <h2 class="list-title css-title">CSS</h2>
+        <ol class="inner-list numbered-upper-roman" start="10">
+          <li class="inner-item">SASS</li>
+          <li class="inner-item">LESS</li>
+          <li class="inner-item">PostCSS</li>
+        </ol>
+      </li>
+      <li class="list-item">
+        <h2 class="list-title js-title">JavaScript</h2>
+        <ul class="inner-list bulleted-circle">
+          <li class="inner-item">Vuejs</li>
+          <li class="inner-item">Sveltejs</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
 </html>
