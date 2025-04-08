@@ -1,0 +1,56 @@
+/* Filename: styles.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Optional: Page background color */
+}
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #29abe0; /* Blue color for the text */
+  font-weight: bold;
+  position: absolute;
+  top: 10px; /* Adjust for overlap */
+  left: 10px; /* Adjust for overlap */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  z-index: 3; /* Ensure the white box is on top */
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f264a7; /* Pink color */
+  transform: rotate(-5deg); /* Rotate the pink box */
+  z-index: 1;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 20px; /* Adjust for different overlap */
+  left: -10px; /* Adjust for different overlap */
+  width: 100%;
+  height: 100%;
+  background-color: #29abe0; /* Blue color */
+  transform: rotate(5deg); /* Rotate the blue box */
+  z-index: 2;
+}
