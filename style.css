@@ -1,0 +1,61 @@
+/* Filename: styles.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Optional: Background color for the page */
+}
+
+.grid {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr; /* Adjust row heights as needed */
+  gap: 20px;
+}
+
+.grid > div {
+  background-color: #6c919a; /* Element background color */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.grid > div:nth-child(1)::before {
+  content: "Element 1";
+}
+
+.grid > div:nth-child(2)::before {
+  content: "Element 2";
+}
+
+.grid > div:nth-child(3)::before {
+  content: "Element 3";
+}
+
+.grid > div:nth-child(4)::before {
+  content: "Element 4";
+}
+
+.grid > div:nth-child(5)::before {
+  content: "Element 5";
+}
+
+.grid > div:nth-child(6)::before {
+  content: "Element 6";
+}
+
+/* Optional: Adjust the height of the top row elements */
+.grid > div:nth-child(1),
+.grid > div:nth-child(2),
+.grid > div:nth-child(3) {
+  height: 50px; /* Adjust as needed */
+}
