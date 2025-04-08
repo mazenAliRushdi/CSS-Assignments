@@ -1,0 +1,39 @@
+/* styles.css */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align paragraphs to the left */
+  padding: 20px;
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+p {
+  background-color: #ddd; /* Light gray background for the comment area */
+  color: black;
+  padding: 15px;
+  margin-bottom: 10px;
+  position: relative; /* For positioning the pseudo-element */
+  width: 600px; /* Adjust width as needed */
+}
+
+p::before {
+  content: attr(data-person);
+  position: absolute;
+  left: -70px; /* Adjust position to place it outside the paragraph */
+  top: 0;
+  background-color: #ddd; /* Light gray background for the name box */
+  color: black;
+  padding: 15px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent name from wrapping */
+}
+
+p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #e91e63; /* Pink color for the indicator */
+  width: 5px;
+  height: 100%;
+}
