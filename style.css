@@ -1,0 +1,23 @@
+/* styles.css */
+.text-box {
+  width: 400px;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark text color */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide any content that overflows the box */
+  text-overflow: ellipsis; /* Display an ellipsis (...) to indicate overflow */
+}
+
+.normal-text {
+  white-space: normal; /* Allow normal text wrapping */
+  overflow: visible; /* Show overflowing content */
+  text-overflow: clip; /* Do not display ellipsis */
+}
+
+.short-text {
+  white-space: normal; /* Allow normal text wrapping */
+  overflow: visible; /* Show overflowing content */
+  text-overflow: clip; /* Do not display ellipsis */
+}
