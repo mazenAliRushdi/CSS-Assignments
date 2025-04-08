@@ -1,0 +1,29 @@
+div {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  margin-bottom: 10px; /* Add some spacing between divs */
+  color: white; /* Set text color to white for better visibility */
+  text-align: center; /* Center the text inside the div */
+}
+
+.assign-1-shape-1 {
+  background-color: blueviolet; /* Hex */
+}
+
+.assign-1-shape-2 {
+  background-color: rgb(138, 43, 226); /* RGB */
+}
+
+.assign-1-shape-3 {
+  background-color: hsl(271, 76%, 53%); /* HSL */
+}
+
+.assign-1-shape-4 {
+  background-color: rgba(138, 43, 226, 0.5); /* RGBA - 50% opacity */
+}
+
+.assign-1-shape-5 {
+  background-color: rgba(138, 43, 226, 0.1); /* RGBA - 10% opacity */
+}
