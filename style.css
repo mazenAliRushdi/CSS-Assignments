@@ -1,0 +1,86 @@
+/* Filename: styles.css */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header, Content Row, Footer */
+  grid-template-columns: 1fr 300px; /* Section, Aside */
+  grid-template-areas:
+    "header header"
+    "section aside"
+    "footer footer";
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 300px;
+  grid-template-areas:
+    "header header"
+    "section aside"
+    "footer footer";
+  height: 100%; /* Make layout take full height */
+}
+
+.layout > header {
+  grid-area: header;
+  background-color: #29abe0;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+.layout > section {
+  grid-area: section;
+  background-color: #ff7f50;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.layout > aside {
+  grid-area: aside;
+  background-color: #808080;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.layout > footer {
+  grid-area: footer;
+  background-color: #008080;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+.layout > header::before {
+  content: "Header";
+}
+
+.layout > section::before {
+  content: "Section";
+}
+
+.layout > aside::before {
+  content: "Aside";
+}
+
+.layout > footer::before {
+  content: "Footer";
+}
