@@ -1,0 +1,55 @@
+/* style.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+.parent {
+  background-color: #eee; /* Light gray container background */
+  width: 600px;
+  height: 300px;
+  display: flex;
+  justify-content: space-around; /* Distribute items horizontally */
+  align-items: center; /* Center items vertically */
+  padding: 20px;
+}
+
+.parent > div {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 100px; /* Fixed width for the columns */
+  /* Height will vary based on alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one {
+  background-color: #ff9800; /* Orange */
+  align-self: flex-start; /* Align to the top */
+  height: 150px;
+}
+
+.two {
+  background-color: #8bc34a; /* Light Green */
+  align-self: flex-end; /* Align to the bottom */
+  height: 150px;
+}
+
+.three {
+  background-color: #795548; /* Brown */
+  align-self: flex-start; /* Align to the top */
+  height: 100px;
+}
+
+.four {
+  background-color: #9c27b0; /* Purple */
+  align-self: flex-end; /* Align to the bottom */
+  height: 100px;
+}
