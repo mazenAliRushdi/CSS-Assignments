@@ -1,0 +1,71 @@
+/* Global Styles (Optional) */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Class to center flex items both horizontally and vertically */
+.center-flex {
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+}
+
+/* Class to center an element within its parent using absolute positioning */
+.center-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Class to create a 100px by 100px circle */
+.circle-100 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Makes it a circle */
+}
+
+/* Class to create a 200px by 200px circle */
+.circle-200 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Makes it a circle */
+}
+
+/* Example Styles for Demonstration (can be in a separate style.css if needed) */
+.flex-container {
+  background-color: #f0f0f0;
+  height: 200px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.positioned-parent {
+  position: relative; /* Needed for .center-position to work correctly */
+  background-color: #e0e0e0;
+  height: 150px;
+  border: 1px solid #bbb;
+  margin-bottom: 20px;
+}
+
+.positioned-element {
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  text-align: center;
+  line-height: 50px;
+}
+
+.circle {
+  background-color: lightcoral;
+  color: white;
+  text-align: center;
+  line-height: 100px; /* For circle-100 */
+  font-weight: bold;
+}
+
+.large-circle {
+  line-height: 200px; /* For circle-200 */
+  font-size: 1.5em;
+}
