@@ -1,0 +1,16 @@
+/* style.css */
+:root {
+  --mainColor: #009688;
+  --mainPadding: 10px;
+}
+
+div {
+  background-color: white;
+  color: var(--mainColor);
+  padding: var(--mainPadding, 10px); /* Use variable with fallback */
+  border: 2px solid var(--mainColor);
+  width: 300px; /* Example width */
+  margin: 10px auto; /* Center the divs */
+  font-size: 20px; /* Example font size */
+  text-align: left; /* Align text to the left */
+}
