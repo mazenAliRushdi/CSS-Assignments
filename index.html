@@ -3,8 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Assignments</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Centered Link</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0; /* Light gray background for the page */
+      }
+
+      a {
+        display: block; /* Make the anchor a block-level element */
+        background-color: #009688; /* Teal background */
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        text-decoration: none; /* Remove underline */
+        padding: 20px 50px;
+        border-bottom: 10px solid #00796b; /* Darker teal bottom border */
+        border-radius: 5px; /* Optional: Add some rounded corners */
+        text-align: center;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <a href="https://elzero.org">Elzero</a>
+  </body>
 </html>
