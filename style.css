@@ -1,0 +1,31 @@
+/* styles.css */
+.element {
+  width: 400px;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark text color */
+  position: relative; /* For positioning the colored bar */
+  overflow: hidden; /* To contain the bar if it overflows slightly */
+}
+
+.element::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 8px; /* Width of the colored bar */
+}
+
+.element-1::before {
+  background-color: #e91e63; /* Pink color */
+}
+
+.element-2 {
+  visibility: hidden;
+}
+
+.element-3::before {
+  background-color: #009688; /* Teal color */
+}
