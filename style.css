@@ -1,0 +1,3 @@
+div > :not(h3):not(div:first-child):not(div:last-of-type) {
+  color: red;
+}
