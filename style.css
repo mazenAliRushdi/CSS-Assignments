@@ -1,0 +1,43 @@
+.arrow {
+  position: relative;
+  padding: 15px 30px; /* Adjust padding as needed */
+  background-color: #f0f0f0; /* Example background color */
+  color: #333; /* Example text color */
+  margin: 10px 0; /* Adjust margin as needed */
+  display: inline-block; /* To contain the arrow properly */
+  overflow: hidden; /* To prevent potential overflow of the pseudo-element */
+}
+
+.arrow::before {
+  content: "";
+  position: absolute;
+  border: 10px solid transparent; /* Adjust arrow size */
+}
+
+.arrow.top::before {
+  bottom: 100%; /* Position at the top edge */
+  left: 50%;
+  transform: translateX(-50%) translateY(50%); /* Adjust vertical alignment */
+  border-bottom-color: red; /* Match background */
+}
+
+.arrow.right::before {
+  left: 100%; /* Position at the right edge */
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%); /* Adjust horizontal alignment */
+  border-left-color: red; /* Match background */
+}
+
+.arrow.bottom::before {
+  top: 100%; /* Position at the bottom edge */
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); /* Adjust vertical alignment */
+  border-top-color: red; /* Match background */
+}
+
+.arrow.left::before {
+  right: 100%; /* Position at the left edge */
+  top: 50%;
+  transform: translateY(-50%) translateX(50%); /* Adjust horizontal alignment */
+  border-right-color: red; /* Match background */
+}
