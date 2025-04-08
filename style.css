@@ -1,0 +1,49 @@
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center products horizontally */
+}
+
+.product {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  flex-basis: 100%; /* Make each product take full width initially */
+}
+
+/* For small screens (less than 768px) */
+@media (max-width: 767px) {
+  body {
+    background-color: lightblue;
+  }
+  .product {
+    flex-basis: 100%; /* One product per row */
+    background-color: #e0f7fa; /* Different color for small screens */
+  }
+}
+
+/* For medium screens (from 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-color: lightgreen;
+  }
+  .product {
+    flex-basis: calc(50% - 20px); /* Two products per row with some spacing */
+    background-color: #e8f5e9; /* Different color for medium screens */
+  }
+}
+
+/* For large screens (greater than 992px) */
+@media (min-width: 992px) {
+  body {
+    background-color: lightcoral;
+  }
+  .product {
+    flex-basis: calc(
+      33.33% - 20px
+    ); /* Three products per row with some spacing */
+    background-color: #ffebee; /* Different color for large screens */
+  }
+}
