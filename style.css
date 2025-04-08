@@ -1,0 +1,68 @@
+/* style.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+.parent {
+  background-color: #eee; /* Light gray container background */
+  width: 600px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for layout */
+  gap: 10px; /* Space between items */
+  padding: 10px; /* Padding inside the container */
+}
+
+.parent > div {
+  background-color: #607d8b; /* Grayish blue color */
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one {
+  width: calc(50% - 15px); /* Takes half width minus half the gap */
+  height: calc(
+    33.333% - 13.333px
+  ); /* Roughly one-third height minus some gap */
+  order: 6; /* Place at the bottom right */
+}
+
+.two {
+  width: calc(50% - 15px);
+  height: calc(66.666% - 20px); /* Roughly two-thirds height minus gap */
+  order: 4; /* Place at the bottom left */
+}
+
+.three {
+  width: calc(50% - 15px);
+  height: calc(33.333% - 13.333px);
+  order: 2; /* Place at the top middle */
+}
+
+.four {
+  width: calc(50% - 15px);
+  height: calc(33.333% - 13.333px);
+  order: 3; /* Place at the top right */
+}
+
+.five {
+  width: calc(50% - 15px);
+  height: calc(33.333% - 13.333px);
+  order: 5; /* Place in the middle left */
+}
+
+.six {
+  width: calc(50% - 15px);
+  height: calc(66.666% - 20px);
+  order: 1; /* Place at the top left */
+}
