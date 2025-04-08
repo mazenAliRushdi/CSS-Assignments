@@ -1,0 +1,35 @@
+/* style.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+.parent {
+  background-color: #eee; /* Light gray container background */
+  width: 600px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-around; /* Distribute items with space between */
+  align-items: flex-start; /* Align items to the top of the container */
+  padding: 20px; /* Add some padding around the inner divs */
+  gap: 20px; /* Space between the inner divs */
+}
+
+.parent > div {
+  background-color: #f44336; /* Red background for the inner divs */
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: calc(
+    33.333% - 40px
+  ); /* Roughly one-third width minus gaps and padding */
+  height: 80px; /* Example height for the inner divs */
+  line-height: 80px; /* Vertically center text */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
