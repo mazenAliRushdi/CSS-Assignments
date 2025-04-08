@@ -1,0 +1,53 @@
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4; /* Optional background color */
+}
+
+.envelope-container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  /* No background needed for the container itself */
+}
+
+.top-flap {
+  width: 141.42px; /* Approximately 200px * cos(45deg) * sqrt(2) to form the top diamond */
+  height: 141.42px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  clip-path: polygon(
+    50% 0%,
+    0% 50%,
+    50% 100%,
+    100% 50%
+  ); /* Creates the diamond shape */
+}
+
+.bottom-part {
+  width: 200px;
+  height: 150px; /* Adjust height as needed */
+  background-color: #8897a4; /* Light grey-blue color */
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 10px; /* Adjust padding for text position */
+  color: white;
+  font-weight: bold;
+  font-size: 20px; /* Adjust font size as needed */
+}
+
+.bottom-line {
+  width: 200px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+}
