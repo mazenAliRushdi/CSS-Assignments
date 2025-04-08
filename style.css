@@ -1,0 +1,56 @@
+/* styles.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+div {
+  width: 400px;
+  padding: 20px;
+  border: 2px solid #f44336; /* Red border */
+  background-color: #e0f7fa; /* Light cyan background */
+  position: relative; /* For positioning the corner spans */
+  color: #333; /* Dark text color */
+  line-height: 1.5;
+}
+
+span {
+  width: 30px;
+  height: 30px;
+  background-color: #2196f3; /* Blue background */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.top-left {
+  top: -15px;
+  left: -15px;
+  border-radius: 0 0 50% 50%;
+}
+
+.bottom-left {
+  bottom: -15px;
+  left: -15px;
+  border-radius: 50% 50% 0 0;
+}
+
+.top-right {
+  top: -15px;
+  right: -15px;
+  border-radius: 0 0 50% 50%;
+}
+
+.bottom-right {
+  bottom: -15px;
+  right: -15px;
+  border-radius: 50% 50% 0 0;
+}
