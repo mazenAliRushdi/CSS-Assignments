@@ -1,10 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Assignments</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Elzero Circle</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: white; /* Optional: Set a background color for the page */
+      }
+
+      .circle-container {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: relative; /* For absolute positioning of the text */
+        background-color: #f0f0f0; /* Light grey inner circle */
+        box-sizing: border-box; /* Ensure padding and border are inside the element's dimensions */
+      }
+
+      .outer-border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 10px solid transparent; /* Make the initial border transparent */
+        box-sizing: border-box;
+      }
+
+      .blue-arc {
+        border-top-color: blue;
+        border-left-color: blue;
+        clip-path: polygon(
+          0 0,
+          50% 0,
+          50% 100%,
+          0 100%
+        ); /* Clip the right side */
+      }
+
+      .red-arc {
+        border-bottom-color: red;
+        border-right-color: red;
+        clip-path: polygon(
+          50% 0,
+          100% 0,
+          100% 100%,
+          50% 100%
+        ); /* Clip the left side */
+      }
+
+      .text-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="circle-container">
+      <div class="outer-border blue-arc"></div>
+      <div class="outer-border red-arc"></div>
+      <div class="text-container">Elzero</div>
+    </div>
+  </body>
 </html>
