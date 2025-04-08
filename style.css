@@ -1,0 +1,52 @@
+/* style.css */
+:root {
+  --parent-bg-color: #3498db; /* Blue */
+  --child-bg-color: #e74c3c; /* Red */
+  --hover-translate-y: -20px;
+  --transition-duration: 0.5s;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.parent {
+  width: 100px;
+  height: 100px;
+  background-color: var(--parent-bg-color);
+  position: relative;
+  border-radius: 5px;
+  -webkit-transition: -webkit-transform var(--transition-duration) ease-in-out;
+  transition: transform var(--transition-duration) ease-in-out;
+}
+
+.parent:hover {
+  -webkit-transform: translateY(var(--hover-translate-y));
+  transform: translateY(var(--hover-translate-y));
+}
+
+.child {
+  width: 60px;
+  height: 60px;
+  background-color: var(--child-bg-color);
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) translateY(0);
+  transform: translate(-50%, -50%) translateY(0);
+  -webkit-transition: -webkit-transform var(--transition-duration) ease-in-out
+    var(--transition-duration);
+  transition: transform var(--transition-duration) ease-in-out
+    var(--transition-duration);
+}
+
+.parent:hover .child {
+  -webkit-transform: translate(-50%, -50%) translateY(20px);
+  transform: translate(-50%, -50%) translateY(20px);
+}
