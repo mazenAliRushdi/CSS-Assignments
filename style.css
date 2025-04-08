@@ -1,0 +1,28 @@
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: black; /* Match the background color */
+}
+
+.pulsating-ring {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid white; /* Adjust border width for ring thickness */
+  box-sizing: border-box; /* Ensure border is inside the dimensions */
+  animation: pulsate 1s infinite alternate;
+}
+
+@keyframes pulsate {
+  0% {
+    border-width: 5px;
+    opacity: 1;
+  }
+  100% {
+    border-width: 10px; /* Adjust for the pulse effect */
+    opacity: 0.5; /* Optional: Fade out slightly */
+  }
+}
