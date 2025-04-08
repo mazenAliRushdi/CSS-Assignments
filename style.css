@@ -1,0 +1,17 @@
+/* styles.css */
+p {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.one {
+  text-transform: uppercase;
+}
+
+.two {
+  text-transform: capitalize;
+}
+
+.three {
+  text-transform: lowercase;
+}
