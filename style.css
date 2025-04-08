@@ -1,0 +1,30 @@
+/* styles.css */
+div {
+  width: 400px;
+  height: 400px;
+  margin: 20px auto; /* Center the divs horizontally */
+  color: white; /* For better text visibility if needed */
+  text-align: center; /* Center text inside the divs */
+  line-height: 400px; /* Vertically center single line text */
+  background-image: url("https://placehold.co/300x300/orange/white"); /* Replace 'your-image.png' with the actual path to the image */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+}
+
+.assign-4-shape-1 {
+  background-size: 80% 80%;
+}
+
+.assign-4-shape-2 {
+  background-size: 80% auto; /* Adjust width to 80%, maintain aspect ratio for height */
+  background-position: top left;
+}
+
+.assign-4-shape-3 {
+  background-size: auto 80%; /* Maintain aspect ratio for width, adjust height to 80% */
+  background-position: bottom left;
+}
+
+.assign-4-shape-4 {
+  background-size: 50% 50%;
+  background-position: bottom right;
+}
