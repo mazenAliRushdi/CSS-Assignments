@@ -1,10 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Assignments</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Elzero Skew</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically (optional, for full page centering) */
+        min-height: 100vh; /* Ensure body takes full viewport height (optional) */
+        margin: 0;
+        background-color: #f4f4f4; /* Optional background color */
+      }
+
+      .skew-container {
+        --main-color: orange; /* Define the main color variable */
+        width: 150px;
+        height: 100px; /* Adjust height as needed to match the visual */
+        background-color: var(--main-color);
+        position: relative;
+        transform: skewX(20deg); /* Initial skew */
+      }
+
+      .skew-container::before,
+      .skew-container::after {
+        content: "";
+        position: absolute;
+        background-color: inherit; /* Inherit the orange color */
+        width: 100%;
+        height: 100%;
+      }
+
+      .skew-container::before {
+        top: -15px; /* Adjust based on the visual */
+        transform: skewY(-20deg); /* Adjust based on the visual */
+        z-index: -1; /* Place behind the main element */
+      }
+
+      .skew-container::after {
+        bottom: -15px; /* Adjust based on the visual */
+        transform: skewY(20deg); /* Adjust based on the visual */
+        z-index: -1; /* Place behind the main element */
+      }
+
+      .text-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) skewX(-20deg); /* Counter-skew the text */
+        color: white;
+        font-weight: bold;
+        font-size: 20px; /* Adjust font size as needed */
+        white-space: nowrap; /* Prevent text from wrapping */
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="skew-container">
+      <div class="text-wrapper">Elzero</div>
+    </div>
+  </body>
 </html>
