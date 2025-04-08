@@ -1,0 +1,54 @@
+/* style.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: #eee; /* Light gray circle background */
+  border-radius: 50%; /* Make it a circle */
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  -webkit-box-shadow: 5px 5px 0 #e91e63, -5px -5px 0 #2196f3; /* Pink and Blue shadows with prefixes */
+  box-shadow: 5px 5px 0 #e91e63, -5px -5px 0 #2196f3; /* Pink and Blue shadows */
+  position: relative; /* For positioning the number */
+}
+
+div::before {
+  content: attr(data-number);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background-color: black;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+div:nth-child(1)::before {
+  content: "1";
+}
+
+div:nth-child(2)::before {
+  content: "2";
+}
+
+div:nth-child(3)::before {
+  content: "3";
+}
