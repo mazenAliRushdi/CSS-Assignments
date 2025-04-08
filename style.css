@@ -1,7 +1,6 @@
 /* styles.css */
 body {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -10,23 +9,25 @@ body {
 }
 
 div {
-  width: 300px;
-  height: 60px;
-  margin-bottom: 10px;
-  background-color: #f0f0f0; /* Light gray background for the divs */
+  background-color: #ddd; /* Light gray background for the div */
   color: black;
   font-size: 20px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-div:nth-child(2) {
-  background-color: #f44336; /* Red background for the second div */
-  content: ""; /* Required for pseudo-elements on this div if needed later */
+  padding: 15px 30px;
+  position: relative; /* For positioning the pseudo-element */
 }
 
 div::before {
-  content: "";
+  content: "1";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f44336; /* Red background for the indicator */
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
