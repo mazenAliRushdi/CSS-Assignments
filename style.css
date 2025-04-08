@@ -1,0 +1,23 @@
+/* styles.css */
+div {
+  margin: 20px auto;
+  width: 300px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 20px;
+  background-color: #808080; /* Gray background */
+  color: black;
+}
+
+.one {
+  background-color: rgba(128, 128, 128, 0.1); /* Gray with 10% opacity */
+}
+
+.two {
+  background-color: rgba(
+    128,
+    128,
+    128,
+    0.05
+  ); /* Gray with 5% opacity (to appear even lighter) */
+}
