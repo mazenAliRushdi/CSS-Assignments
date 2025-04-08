@@ -1,0 +1,110 @@
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar,
+.content,
+.widget {
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.sidebar {
+  background-color: #f9fbe7;
+  flex-basis: 100%;
+}
+
+.content {
+  background-color: #e3f2fd;
+  flex-basis: 100%;
+}
+
+.widget {
+  background-color: #fce4ec;
+  flex-basis: 100%;
+}
+
+/* Small screens (max-width: 600px) - Stacked layout */
+@media (max-width: 600px) {
+  body {
+    background-color: #ffe0b2; /* Light orange */
+  }
+  .sidebar,
+  .content,
+  .widget {
+    flex-basis: 100%;
+    margin: 10px 0;
+  }
+  .sidebar {
+    background-color: #fff9c4;
+  } /* Light yellow */
+  .content {
+    background-color: #bbdefb;
+  } /* Light blue */
+  .widget {
+    background-color: #f48fb1;
+  } /* Pink */
+}
+
+/* Medium screens (min-width: 601px and max-width: 900px) - Sidebar left, content full, widget bottom */
+@media (min-width: 601px) and (max-width: 900px) {
+  body {
+    background-color: #dcedc8; /* Light green */
+  }
+  .sidebar {
+    flex-basis: 30%;
+    order: 1;
+    margin-right: 10px;
+  }
+  .content {
+    flex-basis: 70%;
+    order: 2;
+  }
+  .widget {
+    flex-basis: 100%;
+    order: 3;
+    margin-top: 10px;
+  }
+  .sidebar {
+    background-color: #f0f4c3;
+  } /* Lime */
+  .content {
+    background-color: #90caf9;
+  } /* Blue */
+  .widget {
+    background-color: #f06292;
+  } /* Deep pink */
+}
+
+/* Large screens (min-width: 901px) - Sidebar left, content middle, widget right */
+@media (min-width: 901px) {
+  body {
+    background-color: #c5cae9; /* Light purple */
+  }
+  .sidebar {
+    flex-basis: 20%;
+    order: 1;
+    margin-right: 20px;
+  }
+  .content {
+    flex-basis: 60%;
+    order: 2;
+    margin-right: 20px;
+  }
+  .widget {
+    flex-basis: 20%;
+    order: 3;
+  }
+  .sidebar {
+    background-color: #e6ee9c;
+  } /* Light lime */
+  .content {
+    background-color: #64b5f6;
+  } /* Light blue */
+  .widget {
+    background-color: #e91e63;
+  } /* Pink */
+}
