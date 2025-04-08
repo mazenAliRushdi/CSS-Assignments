@@ -1,0 +1,31 @@
+/* styles.css */
+.box {
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+  border-style: solid;
+  border-width: 5px;
+  display: inline-block; /* To place divs next to each other */
+}
+
+.box-1 {
+  border-color: red;
+}
+
+.box-2 {
+  border-top-color: green;
+  border-right-color: blue;
+  border-bottom-color: orange;
+  border-left-color: purple;
+}
+
+.box-3 {
+  border-top-color: black;
+  border-right-color: black;
+  border-bottom-color: black;
+  border-left-color: black;
+  border-top-style: dotted;
+  border-right-style: dashed;
+  border-bottom-style: double;
+  border-left-style: groove;
+}
