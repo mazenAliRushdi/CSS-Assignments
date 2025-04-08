@@ -3,8 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Assignments</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Centered Input Fields</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically (if body has sufficient height) */
+        min-height: 100vh; /* Ensure body takes at least the full viewport height */
+        margin: 0; /* Remove default body margins */
+        background-color: #f0f0f0; /* Optional background color */
+      }
+
+      .input-container {
+        display: flex;
+        flex-direction: column; /* Arrange input fields vertically */
+        gap: 20px; /* Spacing between input fields */
+      }
+
+      input[type="text"] {
+        width: 600px;
+        padding: 10px;
+        border: none;
+        border-bottom: 3px solid #e74c3c; /* Red bottom border */
+        font-size: 16px;
+        caret-color: #e74c3c; /* Red caret color */
+        outline: none; /* Remove focus outline */
+        background-color: #f9f9f9; /* Input field background color */
+      }
+
+      input[type="text"]::selection {
+        background-color: #1abc9c; /* Selection background color */
+        color: white;
+      }
+
+      .input-wrapper {
+        position: relative;
+        width: 600px;
+      }
+
+      .colored-line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background: linear-gradient(
+          to right,
+          #e74c3c 50%,
+          #1abc9c 50%
+        ); /* Red to teal gradient */
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="input-container">
+      <div class="input-wrapper">
+        <input type="text" value="Elzero" />
+        <div class="colored-line"></div>
+      </div>
+      <div class="input-wrapper">
+        <input type="text" value="Two" />
+        <div class="colored-line"></div>
+      </div>
+      <div class="input-wrapper">
+        <input type="text" value="Three" />
+        <div class="colored-line"></div>
+      </div>
+    </div>
+  </body>
 </html>
