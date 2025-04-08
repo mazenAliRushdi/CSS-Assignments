@@ -1,0 +1,14 @@
+/* styles.css */
+.title-box {
+  background-color: #a94442; /* Dark red color */
+  color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  width: auto; /* Allow width to adjust to content */
+  max-width: 400px; /* Ensure width does not exceed 400px */
+  display: block; /* Maintain block display */
+}
+
+.title-four {
+  overflow: hidden; /* Hide content that overflows the box */
+}
