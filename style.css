@@ -1,0 +1,16 @@
+/* styles.css */
+:root {
+  font-size: 20px; /* Root font size */
+}
+
+.text-one {
+  font-size: 2.5rem; /* 2.5 * 20px = 50px */
+}
+
+.text-two {
+  font-size: 2rem; /* 2 * 20px = 40px */
+}
+
+.text-three {
+  font-size: 1.5rem; /* 1.5 * 20px = 30px */
+}
